@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Club</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    #nav{
+        width: 100%;
+        border: 1px solid;
+        height: 100px;
+        display: flex;
+        /* justify-content: space-evenly; */
+    }
+    #logo{
+        height: 100%;
+    }
+    #nav>div:nth-child(1){
+        border: 1px solid;
+        width: 20%;
+        text-align: center;
+    }
+    #nav>div:nth-child(2){
+        border: 1px solid;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #nav>div:nth-child(3){
+        border: 1px solid;
+    }
+    #nav>div:nth-child(3)>div{
+        border: 1px solid;
+    }
+</style>
+<body>
+    <div id="nav">
+        <div>
+            <img id="logo" src="../images/STYLE CLUB.png" alt="logo">
+        </div>
+        <div id="sections">
+            <a href="">Mens</a>
+            <a href="">Womens</a>
+            <a href="">Kids</a>
+            <a href="">Indie</a>
+            <a href="">Home and Kitchen</a>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

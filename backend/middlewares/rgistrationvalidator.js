@@ -1,7 +1,7 @@
 const registrationValidator = (req,res,next)=>{
     const data = req.body;
-    if(data.name === undefined || data.email === undefined || data.password === undefined){
-        res.send({msg:"please provide name, email and password"});
+    if(data.name === undefined || data.email === undefined || data.password === undefined || data.address === undefined){
+        res.send({msg:"please provide name, address, email and password"});
         return;
     }
     else if(data.email.split("").includes("@") === false){

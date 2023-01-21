@@ -1,0 +1,72 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.scnav{
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.scnav>div{
+    width: 33%;
+    /* border: 1px solid; */
+}
+#logo{
+    height: 100%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+.scnav>div:nth-child(2){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.scnav a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+    /* border: 1px solid; */
+    padding: 1%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.scnav>div:nth-child(3)>div{
+    /* border: 1px solid; */
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#search{
+    height: 60%;
+    align-self: center;
+    margin-left: 10%;
+    margin-right: auto;
+    border-radius: 50px;
+    border: 1px solid;
+    width: 60%;
+    padding-left: 2%;
+    
+}
+#deluxe{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: white;
+    background-color: black;
+}
+.scnav>div:nth-child(3)>div:nth-child(1)>button{
+    background-color: transparent;
+    color: black;
+    border: 0px;
+  }

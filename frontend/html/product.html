@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/navbar.css">
+<style>
+    #main{
+        width: 100%;
+        /* height: 100px; */
+        border: 1px solid;
+        display: flex;
+        padding: 3%;
+    }
+    #main>div:nth-child(1){
+        width: 20%;
+        border: 1px solid;
+    }
+    #main>div:nth-child(2){
+        width:80%;
+        border: 1px solid;
+    }
+    .headdiv{
+        display: flex;
+        justify-content: space-between;
+    }
+    .headdiv>img{
+        height: 100%;
+        align-self: center;
+    }
+    .filter h1,.filter h3{
+        margin: 2%;
+        display: inline;
+    }
+    .filter p{
+        display: inline;
+    }
+    #topbar{
+        width: 100%;
+        display: flex;
+        background-color: rgb(209, 209, 209)
+    }
+    #main>div:nth-child(2)>h1{
+        text-align: center;
+    }
+
+    #topbar>div{
+        width: 33.33333%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #main>div:nth-child(2)>div>div>h3{
+        margin: auto;
+        margin-top: 3%;
+        font-weight: normal;
+    }
+    #topbar p{
+        display: inline;
+    }
+    #topbar select{
+        margin: 1%;
+        outline: 0px;
+        padding: 1%;
+        background-color: white;
+    }
+</style>
+<body>
+    <div class="scnav">
+        <div><img id="logo" src="../images/logo.png" alt=""></div>
+        <div>
+            <a class="men" href="">MEN</a>
+            <a class="women" href="">WOMEN</a>
+            <a class="kids" href="">KIDS</a>
+            <a id="indie" href="">INDIE</a>
+            <a id="home&kitchen" href="">HOME & KITCHEN</a>
+        </div>
+        <div>
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Sign In
+                </button>
+                <a href="">Customer care</a>
+                <a id="deluxe" href="">visit Deluxe</a>
+            </div>
+            <div>
+                <input id="search" type="text" placeholder="search">
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div>
+            <div class="headdiv">
+                <h3>Refine by</h3>
+                <img src="../images/dropbutton.jpg" alt="">
+            </div>
+            <div class="filter">
+                <div>
+                    <h1>-</h1>
+                    <h3>Gender</h3>
+                    <br>
+                    <input type="checkbox" id="men">
+                    <p>Men</p>
+                    <br>
+                    <input type="checkbox" id="women">
+                    <p>Women</p>
+                </div>
+                <hr>
+                <div>
+                    <h1>-</h1>
+                    <h3>Gender</h3>
+                    <br>
+                    <input type="checkbox" id="men">
+                    <p>Men</p>
+                    <br>
+                    <input type="checkbox" id="women">
+                    <p>Women</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Upto 75 Percent Off</h1>
+            <hr>
+            <div id="topbar">
+                <div>
+                    <h3>33206 items found</h3>
+                </div>
+                <div>
+                    <p>Grid</p>
+                    <div></div>
+                </div>
+                <div>
+                    <p>SORT BY</p>
+                    <select>
+                        <option value="">Relevance</option>
+                        <option value="pricelth">
+                            Price (lowest first
+                        </option>
+                        <option value="pricehtl">
+                            Price (highest first)
+                        </option>
+                        <option value="discount">
+                            Discount
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>

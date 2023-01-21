@@ -8,74 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
     ">
 </head>
+<link rel="stylesheet" href="../css/navbar.css">
 <style>
-    *{
-        font-family: 'Poppins', sans-serif;
-    }
-    body{
-        margin: 0px;
-        padding: 0px;
-        overflow-x: hidden;
-    }
-    .scnav{
-        width: 100%;
-        height: 100px;
-        /* border: 1px solid; */
-        display: flex;
-        justify-content: space-evenly;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-    .scnav>div{
-        width: 33%;
-        /* border: 1px solid; */
-    }
-    #logo{
-        height: 100%;
-        display: block;
-        margin: auto;
-        cursor: pointer;
-    }
-    .scnav>div:nth-child(2){
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .scnav a{
-        text-decoration: none;
-        color: rgb(43, 43, 43);
-        /* border: 1px solid; */
-        padding: 1%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-    .scnav>div:nth-child(3)>div{
-        /* border: 1px solid; */
-        height: 50%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    #search{
-        height: 60%;
-        align-self: center;
-        margin-left: 10%;
-        margin-right: auto;
-        border-radius: 50px;
-        border: 1px solid;
-        width: 60%;
-        padding-left: 2%;
-        
-    }
-    #deluxe{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding-left: 1%;
-        padding-right: 1%;
-        color: white;
-        background-color: black;
-    }
     #sections{
         /* border: 1px solid; */
         width: 100%;
@@ -194,11 +128,6 @@
     .links>div:nth-child(2)>img{
         width: 100%;
     }
-    .scnav>div:nth-child(3)>div:nth-child(1)>button{
-      background-color: transparent;
-      color: black;
-      border: 0px;
-    }
     .modalbody1{
       width: 100%;
       /* border: 1px solid; */
@@ -247,6 +176,44 @@
       font-size: 80%;
       margin: 2%;
       margin-bottom: 300px;
+    }
+    .gender{
+      display: inline;
+      /* background-color: red; */
+    }
+    #register{
+      font-size: 90%;
+    }
+    #register>input[type=text],#register>input[type=password]{
+      width: 100%;
+      margin-top: 3%;
+      outline: 0px;
+      border: 0px;
+      border-bottom: 1px solid grey;
+    }
+    .formp{
+      display: inline;
+      font-size: 80%;
+      /* color: ; */
+    }
+    #register>button{
+      display: block;
+      border: 0px;
+      background-color: rgb(226, 171, 32);
+      color: white;
+      font-size: 90%;
+      padding: 2%;
+      width: 40%;
+      margin-top: 4%;
+      margin-bottom: 300px;
+    }
+    .backbutton{
+      border: 0px;
+      margin: 2%;
+      background-color: transparent;
+      cursor: pointer;
+      display: flex;
+      align-self: flex-start;
     }
 </style>
 <body>
@@ -645,7 +612,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome to style club</h1>
-              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="modalbody1">
@@ -672,7 +639,7 @@
               <p id="tc">By Signing In, I agree to <a>Terms and Conditions</a>.</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
               <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
             </div>
           </div>
@@ -682,33 +649,36 @@
       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
+            <button type="button" class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p>Back</p>
+              </button>
             <div class="modal-header">
+              
               <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome to style club</h1>
-              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <!-- <div class="modalbody1">
-                <div>
-                  <p>Join / Sign In using</p>
-                </div>
-                <div>
-                  <div>
-                    <img src="../images/fblogin.jpg" alt="">
-                  </div>
-                  <div>
-                    <img src="../images/googlelogin.jpg" alt="">
-                  </div>
-                </div>
-              </div> -->
-              <p id="or">or</p>
-              <div class="modalbody2">
-                <input type="text" placeholder="Enter Mobile no./Email">
-                <button>CONTINUE</button>
+              <div class="formmodal">
+                <p>Please set up your account</p>
+                <p>email</p>
+                <form id="register">
+                  <p>Gender:</p>
+                  <input value="female" type="radio"> <p class="gender">Female</p>
+                  <input value="male" type="radio">
+                  <p class="gender">Male</p>
+                  <input id="name" type="text" placeholder="Name">
+                  <input id="mobile" type="text" placeholder="Mobile">
+                  <p class="formp">OTP will be sent to your number for verification.</p>
+                  <input id="" type="password" placeholder="Password">
+                  <input type="text" placeholder="Invite code (optional)">
+                  <input id="" type="checkbox">
+                  <p class="formp">By Signing Up, I agree to Terms and Conditions.</p>
+                  <button type="submit">SEND OTP</button>
+                </form>
               </div>
-              <p id="tc">By Signing In, I agree to <a>Terms and Conditions</a>.</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
               <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
             </div>
           </div>

@@ -194,6 +194,60 @@
     .links>div:nth-child(2)>img{
         width: 100%;
     }
+    .scnav>div:nth-child(3)>div:nth-child(1)>button{
+      background-color: transparent;
+      color: black;
+      border: 0px;
+    }
+    .modalbody1{
+      width: 100%;
+      /* border: 1px solid; */
+    }
+    .modalbody1>div:nth-child(2){
+      display: flex;
+      justify-content: space-between;
+    }
+    .modalbody1>div:nth-child(2)>div:nth-child(1){
+      width: 48%;
+      border: 2px solid blue;
+      cursor: pointer;
+    }
+    .modalbody1>div:nth-child(2)>div:nth-child(2){
+      width: 48%;
+      border: 2px solid red;
+      cursor: pointer;
+    }
+    #exampleModal>div{
+      width: 800px;
+    }
+    .modalbody2>input{
+      width: 100%;
+      height: 30px;
+      border: 0px;
+      border-bottom: 1px solid rgb(230, 171, 22);
+      outline: 0px;
+    }
+    .modalbody2>button{
+      height: 30px;
+      background-color: rgb(230, 171, 22);
+      color: white;
+      border: 0px;
+      width: 50%;
+      margin-top: 3%;
+    }
+    .modal-content{
+      padding: 5%;
+    }
+    #or{
+      text-align: center;
+      color: gray;
+      margin: 2%;
+    }
+    #tc{
+      font-size: 80%;
+      margin: 2%;
+      margin-bottom: 300px;
+    }
 </style>
 <body>
     <div class="scnav">
@@ -207,7 +261,9 @@
         </div>
         <div>
             <div>
-                <a href="">SignIn</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Sign In
+                </button>
                 <a href="">Customer care</a>
                 <a id="deluxe" href="">visit Deluxe</a>
             </div>
@@ -575,6 +631,87 @@
             <div>
                 <img src="../images/banking.jpg" alt="">
             </div>
+        </div>
+      </div>
+
+      <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome to style club</h1>
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+              <div class="modalbody1">
+                <div>
+                  <p>Join / Sign In using</p>
+                </div>
+                <div>
+                  <div>
+                    <img src="../images/fblogin.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="../images/googlelogin.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <p id="or">or</p>
+              <div class="modalbody2">
+                <input type="text" placeholder="Enter Mobile no./Email">
+                <!-- <button>CONTINUE</button> -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                  CONTINUE
+                </button>
+              </div>
+              <p id="tc">By Signing In, I agree to <a>Terms and Conditions</a>.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome to style club</h1>
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+              <!-- <div class="modalbody1">
+                <div>
+                  <p>Join / Sign In using</p>
+                </div>
+                <div>
+                  <div>
+                    <img src="../images/fblogin.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="../images/googlelogin.jpg" alt="">
+                  </div>
+                </div>
+              </div> -->
+              <p id="or">or</p>
+              <div class="modalbody2">
+                <input type="text" placeholder="Enter Mobile no./Email">
+                <button>CONTINUE</button>
+              </div>
+              <p id="tc">By Signing In, I agree to <a>Terms and Conditions</a>.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
         </div>
       </div>
       

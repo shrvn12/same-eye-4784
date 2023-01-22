@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULLE BODYSUIT | WOMENS</title>
+</head>
+
+<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/bottomsec.css">
+<link rel="stylesheet" href="../css/item.css">
+
+<style>
+
+</style>
+
+<body>
+    <div class="scnav">
+        <div><img id="logo" src="../images/logo.png" alt=""></div>
+        <div>
+            <a class="men" href="./product.html">MEN</a>
+            <a class="women" href="">WOMEN</a>
+            <a class="kids" href="">KIDS</a>
+            <a id="indie" href="">INDIE</a>
+            <a id="home&kitchen" href="">HOME & KITCHEN</a>
+        </div>
+        <div>
+            <div>
+                <button id="signinbtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Sign In
+                </button>
+                <a href="">Customer care</a>
+                <a id="deluxe" href="">visit Deluxe</a>
+            </div>
+            <div>
+                <input id="search" type="text" placeholder="search">
+            </div>
+        </div>
+    </div>
+    </div>
+        <div id="main">
+            <div id="main1">
+            <div>
+                <h4>MATERIALS, CARE AND ORIGIN</h4>
+                <h4>ORIGIN</h4>
+                <p>We work with our suppliers, workers, unions and international organizations to develop a supply chain in which human rights are respected and promoted, contributing to the United Nations Sustainable Development Goals. 
+
+                Thanks to the collaboration with our suppliers, we work to know
+                </p>
+                <a>View more</a>
+            </div>
+            <div>
+                <img src="https://assets.ajio.com/medias/sys_master/root/20211005/yq5W/615b5af1f997ddce89f5eb0c/-473Wx593H-469009835-blue-MODEL7.jpg" alt="">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20211009/rVC7/61619257aeb2692b85c17bb9/the_indian_garage_co_blue_washed_slim_fit_jeans.jpg" alt="">
+            </div>
+            <div>
+                <h4>Washed Slim Fit Jeans</h4>
+                <p>Snap-button fastening at the bottom.</p>
+                <p>This garment is not lined.</p>
+                <p>ORANGES | 5039/806</p>
+
+                <p>₹ 468.00</p>
+                <p>MRP incl. of all taxes</p>
+                <div id="size">
+                    <a>S</a>
+                    <a>M</a>
+                    <a>L</a>
+                </div>
+                <p>SIZE GUIDE</p>
+                <div id="message">
+                    <p>ADDED TO BAG</p>
+                    <button id="ok">Move to bag</button>
+                </div>
+                <button id="add">ADD TO BAG</button>
+                <a>CHECK IN-STORE AVAILABILITY</a>
+                <a>DELIVERY, EXCHANGES AND RETURNS</a>
+            </div>
+            </div>
+            <h4>OTHERS YOU MIGHT LIKE</h4>
+            <div id="main2">
+            </div>
+
+            <div id="bottom">
+                <img class="bodyimage" src="https://assets.ajio.com/cms/AJIO/WEB/08032022-D-unisex-ajiocares-strip%20new%20d.jpg" alt="">
+                <img src="../images/ajiocares.jpg" alt="">
+                <div class="links">
+                    <div>
+                        <div>
+                            <p>Ajio</p>
+                            <a>Who We Are</a>
+                            <a>Join Our Team</a>
+                            <a>Terms & Conditions</a>
+                            <a>We Respect Your Privacy</a>
+                            <a>Fees & Payments</a>
+                            <a>Returns & Refunds Policy</a>
+                            <a>Promotions Terms & Conditions</a>
+                        </div>
+                        <div>
+                            <p>Ajio</p>
+                            <a>Who We Are</a>
+                            <a>Join Our Team</a>
+                            <a>Terms & Conditions</a>
+                            <a>We Respect Your Privacy</a>
+                            <a>Fees & Payments</a>
+                            <a>Returns & Refunds Policy</a>
+                            <a>Promotions Terms & Conditions</a>
+                        </div>
+                        <div>
+                            <p>Ajio</p>
+                            <a>Who We Are</a>
+                            <a>Join Our Team</a>
+                            <a>Terms & Conditions</a>
+                            <a>We Respect Your Privacy</a>
+                            <a>Fees & Payments</a>
+                            <a>Returns & Refunds Policy</a>
+                            <a>Promotions Terms & Conditions</a>
+                        </div>
+                        <div>
+                            <p>Ajio</p>
+                            <a>Who We Are</a>
+                            <a>Join Our Team</a>
+                            <a>Terms & Conditions</a>
+                            <a>We Respect Your Privacy</a>
+                            <a>Fees & Payments</a>
+                            <a>Returns & Refunds Policy</a>
+                            <a>Promotions Terms & Conditions</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../images/banking.jpg" alt="">
+                    </div>
+                </div>
+              </div>
+
+</body>
+</html>
+
+<script>
+
+document.querySelector("#logo").addEventListener("click",()=>{
+        window.location.href = "./index.html"
+    })
+
+    let url = "https://636e297ab567eed48ad4f1db.mockapi.io/relProducts?page=1&limit=12";
+
+    async function getdata(){
+        try{
+            let res = await fetch(url);
+            let out = await res.json();
+            display(out);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+    getdata();
+
+    function display(data){
+        document.querySelector("#main2").innerHTML = "";
+        data.forEach(elem => {
+            let div = document.createElement("div");
+            let div2 = document.createElement("div");
+
+            let proimg = document.createElement("img");
+            proimg.setAttribute("src",elem.image);
+
+            let Title = document.createElement("a");
+            Title.innerText = elem.title;
+            Title.setAttribute("href","product.html")
+
+            let Price = document.createElement("p");
+            Price.innerText = elem.price;
+
+            div.append(proimg,div2);
+            div2.append(Title, Price);
+            div.addEventListener("click",function(){
+                location.href = "product.html";
+            })
+            document.querySelector("#main2").append(div);
+        });
+    }
+
+    let size = document.querySelectorAll("#size>a");
+
+    for(let x = 0; x < size.length; x++) {
+        size[x].addEventListener("click", function(){
+            if(size[x].style.color == "black"){
+                for(let z = 0; z < size.length; z++) {
+                    size[z].style.display = "block";
+                    size[z].style.color = "grey";
+                }
+            }
+            else{
+                for(let y = 0; y < size.length; y++) {
+                if(y == x){
+                    size[y].style.color = "black";
+                }
+                else{
+                    size[y].style.display = "none";
+                }
+            }
+            }
+        })
+    }
+
+    document.querySelector("#add").addEventListener("click", function(){
+        document.querySelector("#message").style.display = "block"
+        document.querySelector("#num").innerText = +document.querySelector("#num").innerText + 1;
+        localStorage.setItem("qty",document.querySelector("#num").innerText);
+    })
+
+    document.querySelector("#ok").addEventListener("click", function(){
+        window.location.href = "./cart.html";
+    })
+
+</script>

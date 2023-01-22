@@ -1,0 +1,252 @@
+#top{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+#nav>div{
+    align-self: flex-start;
+}
+
+#main1{
+    width: 97%;
+    height: 88vh;
+    margin: auto;
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main1>div{
+    width: 22%;
+}
+
+#main1>div:first-child{
+    font-size: 70%;
+    width: 12%;
+    padding: 5%;
+    padding-bottom: 0px;
+    height: 60%;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+#main1>div:first-child>p{
+    color: grey;
+    line-height: 1.5em;
+}
+
+#main1>div:nth-child(2){
+    overflow: scroll;
+    height: 80vh;
+    width: 35%;
+}
+
+#main1>div:nth-child(2)>img{
+    width: 100%;
+}
+
+#main1>div:nth-child(3){
+    margin-right: 3%;
+    overflow: hidden;
+}
+
+#main1>div:nth-child(3)>p{
+    font-size: 70%;
+    color: grey;
+    padding-top: 3%;
+}
+#main1>div:nth-child(3)>div{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+#main1>div:nth-child(3)>div>a{
+    padding-left: 2%;
+    display: block;
+    color: grey;
+    font-size: 80%;
+    line-height: 2em;
+}
+#main1>div:nth-child(3)>div>a:hover{
+    background-color: lightgray;
+}
+#main1>div:nth-child(3)>button{
+    width: 100%;
+    border: 0px;
+    color: white;
+    background-color: rgb(194, 194, 20);
+    height: 7%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    cursor:pointer;
+}
+#main1>div:nth-child(3)>a{
+    font-size: 70%;
+    color: grey;
+    margin-top: 3%;
+}
+
+
+#main2{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2%;
+    width: 97%;
+    margin: auto;
+}
+
+#main2>div{
+    margin-top: 2%;
+}
+
+#main2>div>img{
+    width: 100%;
+    display: block;
+}
+
+#main2>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+#main2>div>div>p{
+    font-size: 70%;
+    color: grey;
+    line-height: 0em;
+}
+
+#main2>div>div>a{
+    font-size: 75%;
+    color: grey;
+    line-height: 1.7em;
+    text-decoration: none;
+}
+
+#main>h4{
+    margin-left: 1.5%;
+}
+
+#main3{
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+#main3>input{
+    width: 80%;
+    border: 0px;
+    border-bottom: 1px solid grey;
+    outline: none;
+    display: block;
+    margin-bottom: 20%;
+    margin-top: 5%;
+}
+#main3>a{
+    text-decoration: none;
+    font-size: 70%;
+    color: grey;
+    margin: 1%;
+}
+#main3 ::placeholder{
+    color: rgb(56, 56, 56);
+    font-size: 80%;
+}
+#main3>p{
+    font-size: 75%;
+    font-weight: bold;
+}
+#bottomsec{
+    margin-top: 10%;
+}
+#message{
+    background-color: white;
+    z-index: 2;
+    text-align: center;
+    font-size: 80%;
+    display: none;
+}
+
+#message>button{
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    background-color: rgb(211, 211, 14);
+    color: white;
+}
+
+
+@media screen and (min-width: 400px) and (max-width:700px){
+    #main1>div:nth-child(2){
+        height: 75vh;
+        width: 95%;
+        margin: auto;
+    }
+    #main1>div:nth-child(3){
+        width: 95%;
+        margin: auto;
+    }
+    #main1>div:first-child{
+        width: 90%;
+        margin-left: 50%;
+        order: 3;
+    }
+    #main1{
+        width: 97%;
+        height: auto;
+        padding-top: 15%;
+        flex-direction: column;
+    }
+    #main2{
+        grid-template-columns: repeat(3,1fr);
+        width: 95%;
+    }
+    #main3{
+        margin-top: 30%;
+        width: 100%;
+    }
+    #bottomsec{
+        margin-top: 30%;
+    }
+    #nav:hover{
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width:399px){
+    #main1>div:nth-child(2){
+        height: 70vh;
+        width: 93%;
+        margin: auto;
+    }
+    #main1>div:nth-child(3){
+        width: 95%;
+        margin: auto;
+    }
+    #main1>div:first-child{
+        width: 90%;
+        margin-left: 50%;
+        order: 3;
+    }
+    #main1{
+        width: 97%;
+        height: auto;
+        padding-top: 30%;
+        flex-direction: column;
+    }
+    #main2{
+        grid-template-columns: repeat(2,1fr);
+        width: 95%;
+    }
+
+    #main3{
+        margin-top: 60%;
+        width: 100%;
+    }
+    #bottomsec{
+        margin-top: 30%;
+    }
+    #nav:hover{
+        background-color: white;
+    }
+}

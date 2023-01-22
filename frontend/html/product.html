@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/navbar.css">
+<style>
+    #main{
+        max-width: 100%;
+        /* height: 100px; */
+        /* border: 1px solid; */
+        display: flex;
+        padding: 3%;
+    }
+    #main>div:nth-child(1){
+        width: 20%;
+        /* border: 1px solid; */
+    }
+    #main>div:nth-child(2){
+        width:80%;
+        /* border: 1px solid; */
+    }
+    .headdiv{
+        display: flex;
+        justify-content: space-between;
+    }
+    .headdiv>img{
+        height: 100%;
+        align-self: center;
+    }
+    .filter h1,.filter h3{
+        margin: 2%;
+        display: inline;
+    }
+    .filter p{
+        display: inline;
+    }
+    #topbar{
+        width: 100%;
+        display: flex;
+        background-color: rgb(209, 209, 209)
+    }
+    #main>div:nth-child(2)>h1{
+        text-align: center;
+    }
+
+    #topbar>div{
+        width: 33.33333%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #main>div:nth-child(2)>div>div>h3{
+        margin: auto;
+        margin-top: 3%;
+        font-weight: normal;
+    }
+    #topbar p{
+        display: inline;
+    }
+    #topbar select{
+        margin: 1%;
+        outline: 0px;
+        padding: 1%;
+        background-color: white;
+    }
+    #productdiv{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2%;
+        padding: 3%;
+        text-align: center;
+    }
+    #productdiv img{
+        width: 100%;
+    }
+    #productdiv p{
+        font-size: 80%;
+        line-height: 5px;
+    }
+    #productdiv h3{
+        color: rgb(94, 94, 94);
+    }
+    .brand{
+        color: brown;
+    }
+    #productdiv>div>p:last-child{
+        color: green;
+    }
+    #productdiv>div{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="scnav">
+        <div><img id="logo" src="../images/logo.png" alt=""></div>
+        <div>
+            <a class="men" href="">MEN</a>
+            <a class="women" href="">WOMEN</a>
+            <a class="kids" href="">KIDS</a>
+            <a id="indie" href="">INDIE</a>
+            <a id="home&kitchen" href="">HOME & KITCHEN</a>
+        </div>
+        <div>
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Sign In
+                </button>
+                <a href="">Customer care</a>
+                <a id="deluxe" href="">visit Deluxe</a>
+            </div>
+            <div>
+                <input id="search" type="text" placeholder="search">
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div>
+            <div class="headdiv">
+                <h3>Refine by</h3>
+                <img src="../images/dropbutton.jpg" alt="">
+            </div>
+            <div class="filter">
+                <div>
+                    <h1>-</h1>
+                    <h3>Gender</h3>
+                    <br>
+                    <input type="checkbox" id="men">
+                    <p>Men</p>
+                    <br>
+                    <input type="checkbox" id="women">
+                    <p>Women</p>
+                </div>
+                <hr>
+                <div>
+                    <h1>-</h1>
+                    <h3>Category</h3>
+                    <br>
+                    <input type="checkbox" id="Sweatshirt & Hoodies">
+                    <p>Sweatshirt & Hoodies</p>
+                    <br>
+                    <input type="checkbox" id="footwear">
+                    <p>Casual Shoes</p>
+                    <br>
+                    <input type="checkbox" id="jeans">
+                    <p>Jeans</p>
+                    <br>
+                    <input type="checkbox" id="jacket">
+                    <p>Jackets & Coats</p>
+                    <br>
+                    <input type="checkbox" id="cardigan">
+                    <p>Sweaters & cardigans</p>
+                </div>
+                <hr>
+                <div class="price">
+                    <h1>-</h1>
+                    <h3>Price</h3>
+                    <br>
+                    <input type="checkbox" id="prc.0.500">
+                    <p>Below Rs.500</p>
+                    <br>
+                    <input type="checkbox" id="prc.500.1000">
+                    <p>Rs.500-1000</p>
+                    <br>
+                    <input type="checkbox" id="prc.1001.1500">
+                    <p>Rs.1001-1500</p>
+                    <br>
+                    <input type="checkbox" id="prc.1501.2000">
+                    <p>Rs.1501-2000</p>
+                    <br>
+                    <input type="checkbox" id="prc.2001.2500">
+                    <p>Rs.2001-2500</p>
+                </div>
+                <hr>
+                <div>
+                    <h1>-</h1>
+                    <h3>Brands</h3>
+                    <br>
+                    <input type="checkbox" id="3pin">
+                    <p>3pin</p>
+                    <br>
+                    <input type="checkbox" id="9impression">
+                    <p>9 IMPRESSION</p>
+                    <br>
+                    <input type="checkbox" id="alcis">
+                    <p>ALCIS</p>
+                    <br>
+                    <input type="checkbox" id="allensolly">
+                    <p>ALLEN SOLLY</p>
+                    <br>
+                    <input type="checkbox" id="alvarocastangnino">
+                    <p>ALVARO CASTANGNINO</p>
+                </div>
+                <hr>
+                <div>
+                    <h1>-</h1>
+                    <h3>Occasion</h3>
+                    <br>
+                    <input type="checkbox" id="active">
+                    <p>Active</p>
+                    <br>
+                    <input type="checkbox" id="casual">
+                    <p>Casual</p>
+                    <br>
+                    <input type="checkbox" id="occasion">
+                    <p>Occasion</p>
+                    <br>
+                    <input type="checkbox" id="universal">
+                    <p>Universal</p>
+                </div>
+                <hr>
+                <div>
+                    <h1>-</h1>
+                    <h3>Category</h3>
+                    <br>
+                    <input type="checkbox" id="dsc.0.20">
+                    <p>0-20%</p>
+                    <br>
+                    <input type="checkbox" id="dsc.21.30">
+                    <p>21%-30%</p>
+                    <br>
+                    <input type="checkbox" id="dsc.31.40">
+                    <p>31%-40%</p>
+                    <br>
+                    <input type="checkbox" id="dsc.51.80">
+                    <p>51%-80%</p>
+                </div>
+                <hr>
+                <div>
+                    <h1>-</h1>
+                    <h3>Colors</h3>
+                    <br>
+                    <input type="checkbox" id="black">
+                    <p>Black</p>
+                    <br>
+                    <input type="checkbox" id="blue">
+                    <p>Blue</p>
+                    <br>
+                    <input type="checkbox" id="brown">
+                    <p>Brown</p>
+                    <br>
+                    <input type="checkbox" id="gold">
+                    <p>Gold</p>
+                    <br>
+                    <input type="checkbox" id="white">
+                    <p>White</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Upto 75 Percent Off</h1>
+            <hr>
+            <div id="topbar">
+                <div>
+                    <h3>33206 items found</h3>
+                </div>
+                <div>
+                    <p>Grid</p>
+                    <div></div>
+                </div>
+                <div>
+                    <p>SORT BY</p>
+                    <select>
+                        <option value="">Relevance</option>
+                        <option value="pricelth">
+                            Price (lowest first
+                        </option>
+                        <option value="pricehtl">
+                            Price (highest first)
+                        </option>
+                        <option value="discount">
+                            Discount
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div id="productdiv"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    document.querySelector("#logo").addEventListener("click",()=>{
+        window.location.href = "./index.html"
+    })
+
+    var data = [];
+    const url = "http://localhost:4500/sc/user/"
+
+    async function getdata(url){
+        try {
+            let res = await fetch(url);
+            data = await res.json();
+            render(data);
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
+    getdata(url);
+    const render = (data)=>{
+        let container = document.querySelector("#productdiv");
+        container.innerHTML = "";
+        data.map((item)=>{
+            let div = document.createElement("div");
+            div.addEventListener("click",()=>{
+                window.location.href = "./item.html"
+            })
+            let img = document.createElement("img")
+            let h3 = document.createElement("h3");
+            let brand = document.createElement("p");
+            brand.className = "brand";
+            let price = document.createElement("p");
+            let offer = document.createElement("p");
+            h3.innerText = item.title;
+            img.src = item.image;
+            brand.innerText = item.brand;
+            price.innerText = `₹${item.price}`;
+            offer.innerText = `${item.Discount}% off`
+            div.append(img,brand,h3,price,offer);
+            container.append(div);
+        })
+    }
+
+    render(data);
+
+
+    document.querySelector("#search").addEventListener("input",()=>{
+        let qry = document.querySelector("#search").value
+        let url = `http://localhost:4500/sc/user?search=${qry}`;
+        getdata(url);
+    })
+
+    let pricetags = document.querySelectorAll(".price input");
+    var max = 0;
+    var min = 0;
+    var divelements = [];
+
+    let inputs = document.querySelectorAll(".filter input")
+    for(let elem of inputs){
+        elem.addEventListener("click",async (event)=>{
+            let arr = [];
+            let [cat,max,min] = [0,0]
+            let flag = "yes"
+
+            for(let elem of inputs){
+                if(elem.checked){
+                    if(elem.id.substring(0,3) == "prc" || elem.id.substring(0,3) == "dsc"){
+                        continue;
+                    }
+                    flag = "no"
+                    let str = "";
+                    str+=elem.id;
+                    let url = `http://localhost:4500/sc/user?search=${str.toLowerCase()}`;
+                    try {
+                        let res = await fetch(url);
+                        data = await res.json();
+                        for(let product of data){
+                            if(arr.includes(product)){
+                                continue;
+                            }
+                            arr.push(product);
+                        }
+                        // if(max&&min){
+                        //     arr = arr.filter((item)=>{
+                        //         return item.price >= min && item.price <= max
+                        //     })
+                        // }
+                        render(arr);
+                        divelements = arr;
+                    }
+                    catch (error) {
+                        console.log(error)
+                    }
+                }
+            }
+            if(flag == "yes"){
+                const url = "http://localhost:4500/sc/user/"
+                getdata(url);
+            }
+            let pricefilter = false;
+            for(let elem of pricetags){
+                if(elem.checked){
+                    pricefilter = true;
+                    let range = elem.id.split(".");
+                    max = +range[2];
+                    min = +range[1];
+                    break;
+                }
+            }
+            if(pricefilter){
+                if(divelements.length === 0){
+                    const url = "http://localhost:4500/sc/user/"
+                    try {
+                        let res = await fetch(url);
+                        data = await res.json();
+                        data = data.filter((item)=>{
+                            return +item.price >= min && +item.price <= max;
+                        })
+                        render(data);
+                    }
+                    catch (error) {
+                        console.log(error)
+                    }
+                }
+                else{
+                    divelements = divelements.filter((item)=>{
+                    return +item.price >= min && +item.price <= max;
+                    })
+                    render(divelements);
+                }
+                
+            }
+        })
+    }
+</script>

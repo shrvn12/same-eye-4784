@@ -1,0 +1,108 @@
+#nav{
+    margin-left: 2%;
+    width: 98%;
+}
+#nav>div:last-child{
+    /* border: 1px solid; */
+    width: min-content;
+    align-items: flex-start;
+    margin-right: 2%;
+}
+#nav>div:last-child>a{
+    color: rgb(109, 109, 109);
+}
+#head{
+    /* border: 1px solid; */
+    display: flex;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+#head>a{
+    margin: 1%;
+}
+#head>a:first-child{
+    color: black;
+    font-weight: bold;
+}
+#cart{
+    /* border: 1px solid; */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+#cart>p{
+    margin: auto;
+    font-size: 70%;
+}
+#res{
+    max-width: 100%;
+    padding: 3%;
+    text-align: center;
+}
+#res>div{
+    width: 30%;
+}
+
+    /* #res>div>img{
+        width: 100%;
+        display: block;
+    }
+
+    #res>div>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    #res>div>div>p{
+        font-size: 70%;
+        color: grey;
+        line-height: 0em;
+    }
+
+    #res>div>div>a{
+        font-size: 75%;
+        color: grey;
+        line-height: 1.7em;
+        text-decoration: none;
+    }
+
+    #res>div>div:nth-child(3){
+        margin-top: 5%;
+        margin-bottom: 5%;
+        /* border: 1px solid; */
+        /* font-size: 100%;
+    } */
+ 
+    /* #res>div>div:nth-child(3)>button{
+        border: 0px;
+        color: grey;
+        font-size: 120%;
+    }
+
+    #res>div>div:nth-child(4)>button{
+        width: 100%;
+        border: 0px;
+        color: white;
+        background-color: black;
+        height: 30px;
+        visibility: ;
+    } */
+
+    #place{
+        width: 95%;
+        margin: auto;
+        /* display: none; */
+        /* border: 1px solid; */
+    }
+    #place>p{
+        margin-left: auto;
+        color: grey;
+        font-size: 80%;
+    }
+    #place>button{
+        height: 25px;
+        align-self: center;
+        margin-left: 3%;
+        border: 0px;
+        color: white;
+        background-color: rgb(168, 168, 48);
+    }

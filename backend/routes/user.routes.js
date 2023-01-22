@@ -15,8 +15,16 @@ const saltRounds = process.env.saltRounds;
 const userRouter = express.Router();
 
 userRouter.get("/",async (req,res)=>{
-    const data = await productModel.find();
-    res.send(data.toString());
+    const qry = req.query;
+    // res.send(qry);
+    if(qry.search){
+        const data = await productModel.find({$text:{$search:qry.search}});
+        res.send(data);
+    }
+    else{
+        const data = await productModel.find();
+        res.send(data);
+    }
 })
 
 userRouter.use("/register",registrationValidator)

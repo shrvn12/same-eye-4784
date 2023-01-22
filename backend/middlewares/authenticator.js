@@ -14,7 +14,7 @@ const authenticator = (req,res,next)=>{
         });
     }
     else{
-        res.send({msg:"you are not logged in"});
+        res.send({msg:"you are not loggeddd in"});
     }
 }
 
